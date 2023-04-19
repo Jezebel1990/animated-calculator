@@ -1,8 +1,10 @@
-import { useState } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
 
+import React from 'react';
 import { ThemeContext } from "./src/context/ThemeContext";
 import { StyleSheet, Switch, Text, View } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -26,4 +28,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
  
