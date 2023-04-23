@@ -3,9 +3,11 @@ import Button from "./Button";
 import { View, Text, StyleSheet } from "react-native";
 import { Styles } from "../styles/GlobalStyles";
 import {colors} from "../styles/Colors";
-
+import Theme from '../styles/Theme';
 
 const  MyKeyboard = () => {
+
+
     const [firstNumber, setFirstNumber] = React.useState("");
     const [secondNumber, setSecondNumber] = React.useState("");
     const [operation, setOperation] = React.useState("");
@@ -50,6 +52,7 @@ const firstNumberDisplay = () => {
         <Text style={[Styles.screenFirstNumber, { fontSize: 50 }]}>
           {firstNumber}
         </Text>
+        
       );
     }
   };
@@ -82,8 +85,11 @@ const getResult = () => {
 };
 
     return(
-      <View style={styles.container}>
+      
+         <View style={styles.container}>
+     <Theme/>
         <View style={Styles.viewBottom}>
+         
          <View
         style={{
           height: 120,
@@ -130,8 +136,10 @@ const getResult = () => {
       </View>
     </View>
     </View>
+    
+  
     );
-}
+      }
 const styles = StyleSheet.create({
   container: {
       flex: 1,
@@ -141,3 +149,4 @@ const styles = StyleSheet.create({
 })
 
 export default MyKeyboard;
+
