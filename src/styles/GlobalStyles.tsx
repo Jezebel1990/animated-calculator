@@ -69,4 +69,10 @@ export const Styles = StyleSheet.create({
             fontWeight: '200',
             alignSelf: "flex-end",
         },
+        container: {
+                    flex: 1,
+                    backgroundColor: colors.white,
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                },
     })

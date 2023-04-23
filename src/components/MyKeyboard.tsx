@@ -1,10 +1,11 @@
 import * as React from "react";
 import Button from "./Button";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Styles } from "../styles/GlobalStyles";
 import {colors} from "../styles/Colors";
 
-export default function MyKeyboard() {
+
+const  MyKeyboard = () => {
     const [firstNumber, setFirstNumber] = React.useState("");
     const [secondNumber, setSecondNumber] = React.useState("");
     const [operation, setOperation] = React.useState("");
@@ -81,6 +82,7 @@ const getResult = () => {
 };
 
     return(
+      <View style={styles.container}>
         <View style={Styles.viewBottom}>
          <View
         style={{
@@ -127,5 +129,15 @@ const getResult = () => {
         <Button title="=" isBlue onPress={() => getResult()} />
       </View>
     </View>
-    )
+    </View>
+    );
 }
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+})
+
+export default MyKeyboard;

@@ -1,25 +1,44 @@
-import React from 'react';
-import {StyleSheet ,View } from 'react-native';
+import React, { useEffect } from 'react';
+import {Dimensions, StyleSheet ,View } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { colors } from '../styles/Colors';
 import calculatorJson from '../../assets/calculator.json';
+import { CommonActions, useNavigation } from '@react-navigation/native';
+
 
 export interface SplashScreenProps {
-
 }
+
+const size = Dimensions.get('window').width * 0.5
+
 const SplashScreen = () => {
+ const navigation = useNavigation()
+
+useEffect(() => {
+    setTimeout(() => {
+        navigation.dispatch(CommonActions.reset({
+            index: 0,
+          routes: [{name: 'MyKeyboard'}]
+        }))
+          
+    }, 4000 );
+}, [])
+
+
     return (
         <View style={styles.container}>
-            <LottieView source={calculatorJson} autoPlay loop resizeMode='contain' />
+            <LottieView source={calculatorJson} style={{width:size, height:size}}
+            autoPlay loop resizeMode='contain' />
         </View>
     )
 }
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            backgroundColor: colors.light,
             alignItems: 'center',
-            justifyContent: 'flex-start',
+            justifyContent: 'center',
         },
     })
 export default SplashScreen
+
+
+
