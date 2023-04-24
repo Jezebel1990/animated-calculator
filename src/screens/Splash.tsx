@@ -8,7 +8,7 @@ import { CommonActions, useNavigation } from '@react-navigation/native';
 export interface SplashScreenProps {
 }
 
-const size = Dimensions.get('window').width * 0.5
+const size = Dimensions.get('window').width * 0.6
 
 const SplashScreen = () => {
  const navigation = useNavigation()
