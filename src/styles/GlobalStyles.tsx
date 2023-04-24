@@ -2,13 +2,14 @@ import { StyleSheet } from "react-native";
 import {colors} from "./Colors";
 
 
+
 export const Styles = StyleSheet.create({
 
-        btnBlue: {
+        btnPurple: {
             width: 72,
             height: 72,
             borderRadius: 24,
-            backgroundColor: colors.blue,
+            backgroundColor: colors.purple,
             justifyContent: "center",
             alignItems: "center",
             margin: 8,
@@ -46,7 +47,7 @@ export const Styles = StyleSheet.create({
         },
         smallTextDark: {
             fontSize: 32,
-            color: colors.black,
+            color: colors.darkBlue,
         },
         // Keyboard
         row: {
@@ -68,11 +69,5 @@ export const Styles = StyleSheet.create({
             color: colors.gray,
             fontWeight: '200',
             alignSelf: "flex-end",
-        },
-        container: {
-                    flex: 1,
-                    backgroundColor: colors.white,
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                },
+        }
     })

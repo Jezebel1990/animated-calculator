@@ -1,4 +1,17 @@
 {
+  "expo": {
   "name": "Calculadora",
-  "displayName": "Calculadora"
+  "displayName": "Calculadora",
+  "version": "1.0.0"
+},
+"updates": {
+  "fallbackToCacheTimeout": 0
+},
+"assetBundlePatterns": [
+  "**/*"
+],
+"ios": {
+  "supportsTablet": true
+}
+
 }
