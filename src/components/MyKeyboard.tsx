@@ -86,7 +86,7 @@ const getResult = () => {
 
     return(
          
-         <View style={styles.container}>
+         <View testID="operations" style={styles.container}>
             <Theme/>
         <View style={Styles.viewBottom}>
          <View 
@@ -103,17 +103,17 @@ const getResult = () => {
         </Text>
         {firstNumberDisplay()}    
         </View>
-        <View style={Styles.row}>
+        <View  style={Styles.row}>
         <Button title="C" isGray onPress={clear} />
         <Button title="+/-" isGray onPress={() => handleOperationPress("+/-")} />
         <Button title="％" isGray onPress={() => handleOperationPress("％")} />
         <Button title="÷" isPurple onPress={() => handleOperationPress("/")} />
       </View>
-      <View style={Styles.row}>
+      <View  style={Styles.row}>
         <Button title="7" onPress={() => handleNumberPress("7")} />
         <Button title="8" onPress={() => handleNumberPress("8")} />
         <Button title="9" onPress={() => handleNumberPress("9")} />
-        <Button title="×" isPurple onPress={() => handleOperationPress("*")} />
+        <Button  title="×" isPurple onPress={() => handleOperationPress("*")} />
       </View>
       <View style={Styles.row}>
         <Button title="4" onPress={() => handleNumberPress("4")} />

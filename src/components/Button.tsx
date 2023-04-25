@@ -13,7 +13,7 @@ interface ButtonProps {
 export default function Button({ title, onPress, isPurple, isGray}: ButtonProps) {
    const theme = useContext(ThemeContext);
 return (
-  <TouchableOpacity
+  <TouchableOpacity testID="my-button"
       style={
         isPurple
         ? Styles.btnPurple
