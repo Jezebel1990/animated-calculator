@@ -1,5 +1,3 @@
-# animated-calculator
-
 #  📱 Animated Calculator 📱
 Welcome, this project is a calculator mobile app with animations
 
